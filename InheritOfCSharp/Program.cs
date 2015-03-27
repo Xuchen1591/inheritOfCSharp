@@ -5,6 +5,14 @@ using System.Text;
 
 namespace InheritOfCSharp
 {
+    //use 'sealed' to declare this class cant be inherited
+    //like 'final' in java
+    sealed class finalClass
+    {
+        //sealed function cant be override
+        public sealed void someFunc(){}
+    }
+
     class myBaseClass
     {
         public virtual void virtualMethod()
