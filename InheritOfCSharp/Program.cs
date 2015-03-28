@@ -5,12 +5,29 @@ using System.Text;
 
 namespace InheritOfCSharp
 {
+    //interface
+    public interface IDisposable
+    {
+        void dispose();
+    }
+
+    class someClass : IDisposable
+    {
+        //this class MUST contain an implementation of the IDisposable.dispose()
+        //or it will be error in compile
+        public void dispose()
+        {
+            Console.WriteLine("this class MUST contain an implementation of the IDisposable.dispose()");
+        }
+    }
+
+
     //use 'sealed' to declare this class cant be inherited
     //like 'final' in java
     sealed class finalClass
     {
         //sealed function cant be override
-        public sealed void someFunc(){}
+        public void someFunc(){}
     }
 
     class myBaseClass
